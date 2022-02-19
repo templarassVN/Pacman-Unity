@@ -7,7 +7,7 @@ public class Pacman : MonoBehaviour
     Rigidbody2D mRGbody;
     Animator mAnimator;
     CircleCollider2D mcollider2D;
-    RaycastHit2D m_HitDetect;
+    
 
     [SerializeField]
     float _speed = 5;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MapDot : MonoBehaviour
 {
-    float x0 = -13.2f; float y0 = 20.5f;
+    float x0 = -13f; float y0 = 20.5f;
     string[] lines = System.IO.File.ReadAllLines("./Assets/Scripts/Map.txt"); 
     [SerializeField]
     GameObject _smallDot;
@@ -18,8 +18,7 @@ public class MapDot : MonoBehaviour
             for (int x = 0; x < width; x++)
                 if (lines[y][x] == ' ')
                 {
-                    Debug.Log(x);
-                    Debug.Log(y);
+                    
                     Vector2 pos = new Vector2(x0 + x, y0 - y);
                     Instantiate(_smallDot, pos,transform.rotation);
                 }
