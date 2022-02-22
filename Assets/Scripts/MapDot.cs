@@ -11,6 +11,7 @@ public class MapDot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         int height = lines.Length;
         int width = lines[0].Length;
         for (int y = 0; y < height; y++)
@@ -23,6 +24,7 @@ public class MapDot : MonoBehaviour
                     Instantiate(_smallDot, pos,transform.rotation);
                 }
         }
+        */
     }
 
     // Update is called once per frame

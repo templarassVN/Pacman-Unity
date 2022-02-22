@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     int level = 1;
     float _Chasetime = 7f;
     float _Scattertime = 7f;
+    float _Frightnentime = 7f;
+    [SerializeField]
     float _CD = 0f;
     public enum GhostState { FRIGHTEN, CHASE, SCATTER };
     GhostState _ghost_State;
@@ -25,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_ghost_State);
+        //Debug.Log(ghostState);
     }
     private void FixedUpdate()
     {
@@ -46,6 +48,9 @@ public class GameManager : MonoBehaviour
                     _ghost_State = GhostState.CHASE;
                     _CD = 0f;
                 }
+                break;
+            case GhostState.FRIGHTEN:
+                
                 break;
         }
     }
