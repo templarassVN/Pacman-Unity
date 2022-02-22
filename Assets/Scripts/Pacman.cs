@@ -13,8 +13,7 @@ public class Pacman : MonoBehaviour
     float _speed = 5;
     [SerializeField]
     float cast_dis = 2f;
-    [SerializeField]
-    float gap = 2f;
+    
     float _X_dir = 1;
     float _Y_dir = 0;
 
