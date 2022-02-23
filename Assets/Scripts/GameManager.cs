@@ -5,8 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     int level = 1;
+    [SerializeField]
     float _Chasetime = 7f;
+    [SerializeField]
     float _Scattertime = 7f;
+    [SerializeField]
     float _Frightnentime = 7f;
     [SerializeField]
     float _CD = 0f;
@@ -50,7 +53,11 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case GhostState.FRIGHTEN:
-                
+                if (_CD > _Frightnentime)
+                {
+                    _ghost_State = GhostState.CHASE;
+                    _CD = 0f;
+                }
                 break;
         }
     }

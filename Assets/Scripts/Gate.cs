@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dot : MonoBehaviour
+public class Gate : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,9 +15,5 @@ public class Dot : MonoBehaviour
     {
         
     }
-    public virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("b");
-        Destroy(gameObject);
-    }
+    
 }

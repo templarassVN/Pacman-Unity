@@ -7,7 +7,6 @@ public class Pacman : MonoBehaviour
     Rigidbody2D mRGbody;
     Animator mAnimator;
     CircleCollider2D mcollider2D;
-    
 
     [SerializeField]
     float _speed = 5;
@@ -16,6 +15,7 @@ public class Pacman : MonoBehaviour
     
     float _X_dir = 1;
     float _Y_dir = 0;
+    bool isDead = false;
 
     Vector2 nextDir = Vector2.right;
     Vector2 curDir = Vector2.right;
@@ -63,6 +63,21 @@ public class Pacman : MonoBehaviour
         }
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Ghost enemy = collision.gameObject.GetComponent<Ghost>();
+        if (enemy != null)
+        {
+            if(enemy.isFrighten)
+            {
+                enemy.isDead = true;
+                enemy.Refresh(7);
+            }
+            else
+            {
+
+            }
+        }
+    }
 
 }
