@@ -67,11 +67,7 @@ public class Ghost : MonoBehaviour
         get { return free; }
         set { free = value; }
     }
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, Vector2.down * 2f);
-    }
+    
     private void FixedUpdate()
     {
         
@@ -128,8 +124,7 @@ public class Ghost : MonoBehaviour
         float min_distant = float.MaxValue;
         foreach (Vector2 dir in DIRECTION)
         {
-            if (!isDirOcupied(dir))
-                Debug.Log(dir);
+           
             if (!dir.Equals(-preDir) && !isDirOcupied(dir))
             {
                 float temp = (transform.position + (Vector3)dir * 0.05f - target.position).sqrMagnitude;

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Dot : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
+    int amount = 200;
     void Start()
     {
         
@@ -18,6 +20,7 @@ public class Dot : MonoBehaviour
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("b");
+        GameManager.Instance.currScore += amount;
         Destroy(gameObject);
     }
 }

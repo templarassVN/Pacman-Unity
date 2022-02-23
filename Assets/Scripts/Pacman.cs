@@ -55,7 +55,7 @@ public class Pacman : MonoBehaviour
 
     void FixedUpdate()
     {
-        bool hit = Physics2D.BoxCast(mcollider2D.bounds.center, mcollider2D.bounds.size - new Vector3(0.1f,0.1f,0), 0f,nextDir, cast_dis, 1<<6);
+        bool hit = Physics2D.BoxCast(mcollider2D.bounds.center, mcollider2D.bounds.size - new Vector3(0.15f,0.15f,0), 0f,nextDir, cast_dis, 1<<6);
         if (!hit)
         {
             if (!curDir.Equals( nextDir))
